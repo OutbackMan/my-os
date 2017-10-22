@@ -11,7 +11,6 @@ align 4
     dd  MAGIC
     dd  FLAGS
     dd  CHECKSUM
-    
 
     segment .bss
 kernel_stack    resb    2*1024*1024 ; Allocate 2 MiB
