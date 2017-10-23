@@ -1,6 +1,10 @@
+#include <stddef.h>
+#include <stdint.h>
+#include <stdbool.h>
+
 void printf(char *str)
 {
-    volatile unsigned short* video_memory = (unsigned short*) 0xb8000;
+    volatile uint16_t* video_memory = (uint16_t*) 0xb8000;
 
     for (int i = 0; str[i] != '\0'; i++) {
         // Preserve the high byte which stores colour information
@@ -9,11 +13,11 @@ void printf(char *str)
 
 }
 
-void kernel_main(void *multiboot_structure, unsigned int magic_number)
+void kernel_main(void *multiboot_structure, uint32_t magic_number)
 {
     printf("Hello world!");
 
-    while (1) {
+    while (true) {
         ;
     }
 }

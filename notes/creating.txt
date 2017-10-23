@@ -1,1 +1,3 @@
-If host boots in efi, so will grub-mkrescue. So, force to work with BIOS by installing 'grub-pc-bin'.
+Even in a freestanding environment, we have access to <stdef.h>, <stdint.h>, <stdbool.h>, etc. As these are part of the compiler.
+Disable secure boot for VirtualBox with 'mokutil'
+If host boots in efi, so will grub-mkrescue. So, force to work with BIOS by installing 'grub-pc-bin' so can work with VirtualBox.

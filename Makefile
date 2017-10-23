@@ -35,6 +35,11 @@ kernel.iso: kernel.bin
 	grub-mkrescue /usr/lib/grub/i386-pc --output=$@ iso
 	rm -rf iso/
 
+run: kernel.iso
+	# Close any existing virtual boxes
+	killall virtualbox && sleep 1 || true
+	virtualbox --startvm "My OS" &
+
 .PHONY: clean
 clean:
 	@rm -f kernel.iso kernel.bin $(OBJECTS)
