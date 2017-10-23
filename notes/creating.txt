@@ -1,0 +1,1 @@
+If host boots in efi, so will grub-mkrescue. So, force to work with BIOS by installing 'grub-pc-bin'.

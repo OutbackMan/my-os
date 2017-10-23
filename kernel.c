@@ -1,6 +1,6 @@
 void printf(char *str)
 {
-    unsigned short* video_memory = (unsigned short*) 0xb8000;
+    volatile unsigned short* video_memory = (unsigned short*) 0xb8000;
 
     for (int i = 0; str[i] != '\0'; i++) {
         // Preserve the high byte which stores colour information
